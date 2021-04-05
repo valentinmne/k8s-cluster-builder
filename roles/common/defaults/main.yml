@@ -1,0 +1,22 @@
+gpg_keys:
+- key: https://download.docker.com/linux/debian/gpg
+- key: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+
+repositories:
+- repo: "deb [arch=amd64] https://download.docker.com/linux/debian {{ansible_distribution_release}} stable"
+- repo: "deb https://apt.kubernetes.io/ kubernetes-xenial main"
+
+https_packages:
+- name: apt-transport-https
+- name: curl
+
+docker_packages:
+- name: docker-ce
+- name: docker-ce-cli 
+- name: containerd.io
+
+
+k8s_packages:
+- name: kubeadm 
+- name: kubelet 
+- name: kubectl
