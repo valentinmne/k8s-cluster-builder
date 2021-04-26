@@ -90,7 +90,7 @@ This will help us to have an interconnection between pods and use them with a DN
 
 To see if your pods are OK or have a problem you can run this:
 
-```watch kubectl get pods -n 1 calico-system```
+```watch -n 1 kubectl get pods calico-system```
 
 It will update each seconds the status of your pods
 
